@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 30% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --primary: 221 83% 53%;
+  --muted: 215 20% 65%;
+  --border: 215 28% 88%;
+}
+
+.dark {
+  --background: 225 40% 7%;
+  --foreground: 210 40% 96%;
+  --card: 226 32% 11%;
+  --card-foreground: 210 40% 96%;
+  --primary: 255 92% 75%;
+  --muted: 215 20% 65%;
+  --border: 226 24% 22%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased transition-colors duration-500;
+}
+
+::selection {
+  @apply bg-cyan-400/30 text-foreground;
+}
+
+.glass {
+  @apply border border-white/20 bg-white/60 shadow-glass backdrop-blur-2xl dark:border-slate-700/50 dark:bg-slate-950/45;
+}
+
+.section-kicker {
+  @apply mb-3 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-500 dark:text-cyan-300;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

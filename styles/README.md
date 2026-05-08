@@ -1,0 +1,1 @@
+Global styles currently live in `app/globals.css` because that is the standard import location for the Next.js App Router. This folder is reserved for future extracted style modules or design-token documentation.
